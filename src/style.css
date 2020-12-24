@@ -1,0 +1,81 @@
+body {
+    background-color: #AEB8FE;
+    font-family: 'Karla', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+
+.dice {
+    cursor: pointer;
+    width: 90px;
+    height: 90px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    margin: 20px;
+    padding: 8px;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    grid-template-areas:
+        "top-left top-center top-right"
+        "middle-left middle-center middle-right"
+        "bottom-left bottom-center bottom-right"
+}
+
+.dice-number {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.dot {
+    width: 17px;
+    height: 17px;
+    background-image: radial-gradient(rgb(87, 87, 87), black);
+    border-radius: 15px;
+}
+
+.dot-top-left {
+    grid-area: top-left;
+}
+
+.dot-top-center {
+    grid-area: top-center;
+}
+
+.dot-top-right {
+    grid-area: top-right;
+}
+
+.dot-middle-left {
+    grid-area: middle-left;
+}
+
+.dot-middle-center {
+    grid-area: middle-center;
+}
+
+.dot-middle-right {
+    grid-area: middle-right;
+}
+
+.dot-bottom-left {
+    grid-area: bottom-left;
+}
+
+.dot-bottom-center {
+    grid-area: bottom-center;
+}
+
+.dot-bottom-right {
+    grid-area: bottom-right;
+}
