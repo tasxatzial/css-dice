@@ -1,13 +1,13 @@
-# Description
+# Dice roll
 
-A very simple app where you can roll a dice.
+A very basic dice roll app.
 
 ![alt text](screenshots/image.jpg)
 
 ## Implementation
 
-The dice dots are positioned using css grid.
+The dice dots are positioned with CSS grid.
 
 ## Run
 
-Open [index.html](signin/index.html) in your browser.
+Download the repo and open [index.html](signin/index.html) in your browser.
