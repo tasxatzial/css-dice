@@ -1,13 +1,11 @@
-# Dice roll
+# Dice roll app
 
-A very basic dice roll app. See it live [here](https://tasxatzial.github.io/css-dice).
+A very simple dice roll app built using CSS Grid.
+
+See the live version [here](https://tasxatzial.github.io/css-dice).
 
 ![alt text](screenshots/image.jpg)
 
-## Implementation
-
-The dice dots are positioned with CSS grid.
-
 ## Run locally
 
-Download the repo and open [index.html](signin/index.html) in your browser.
+Download the 'src' folder and open 'index.html' in the browser.
