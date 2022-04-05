@@ -12,7 +12,7 @@ body {
     height: 200px;
 }
 
-.dice {
+.dice-container {
     cursor: pointer;
     width: 90px;
     height: 90px;
@@ -32,7 +32,7 @@ body {
         "bottom-left bottom-center bottom-right"
 }
 
-.dice-number {
+.result-container {
     font-size: 2rem;
     font-weight: bold;
 }

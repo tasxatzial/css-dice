@@ -1,45 +1,55 @@
-window.onload = function() {
-    const dice = document.querySelector('.dice');
-    const diceNumber = document.querySelector('.dice-number');
+'use strict';
 
-    dice.appendChild(createDot('dot-middle-center'));
-    diceNumber.innerHTML = 1;
+const diceContainer = document.querySelector('.dice-container');
+const resultContainer = document.querySelector('.result-container');
+diceContainer.addEventListener('click', render);
 
-    dice.addEventListener('click', function() {
-        const randomNumber = 1 + Math.floor(Math.random() * 6);
-        const diceFace = createDiceFace(randomNumber);
-        dice.innerHTML = '';
-        for (let i = 0; i < randomNumber; i++) {
-            dice.appendChild(diceFace[i]);
-        }
-        diceNumber.innerHTML = 'You rolled: ' + randomNumber;
-    });
+init();
+
+function init() {
+    diceContainer.innerHTML = createDotPositionHtml('dot-middle-center');
+    resultContainer.innerHTML = 1;
+}
+
+function render() {
+    diceContainer.innerHTML = createDiceHtml();
+    resultContainer.innerHTML = 'You rolled: ' + diceContainer.children.length;
+}
+
+function createDiceHtml() {
+    const dice = createRandomDice();
+    const diceHtml = dice.map(createDotPositionHtml).join("");
+
+    return diceHtml;
+}
+
+function createDotPositionHtml(position) {
+    return `<div class="dot ${position}"></div>`;
+}
+
+function createRandomDice() {
+    const randomNumber = 1 + Math.floor(Math.random() * 6);
     
+    return createDice(randomNumber);
 }
 
-function createDot(position) {
-    const dot = document.createElement('div');
-    dot.className = 'dot ' + position;
-    return dot;
-}
-
-function createDiceFace(number) {
+function createDice(number) {
     const dots = [];
 
     if (number === 1 || number === 3 || number === 5) {
-        dots.push(createDot('dot-middle-center'));
+        dots.push(('dot-middle-center'));
     }
     if (number !== 1) {
-        dots.push(createDot('dot-top-left'));
-        dots.push(createDot('dot-bottom-right'));
+        dots.push('dot-top-left');
+        dots.push('dot-bottom-right');
     }
     if (number === 4 || number === 5 || number === 6) {
-        dots.push(createDot('dot-top-right'));
-        dots.push(createDot('dot-bottom-left'));
+        dots.push('dot-top-right');
+        dots.push('dot-bottom-left');
     }
     if (number === 6) {
-        dots.push(createDot('dot-middle-left'));
-        dots.push(createDot('dot-middle-right'));
+        dots.push('dot-middle-left');
+        dots.push('dot-middle-right');
     }
 
     return dots;
