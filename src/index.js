@@ -13,7 +13,7 @@ function init() {
 
 function render() {
     diceContainer.innerHTML = createDiceHtml();
-    resultContainer.innerHTML = 'You rolled: ' + diceContainer.children.length;
+    resultContainer.innerHTML = diceContainer.children.length;
 }
 
 function createDiceHtml() {
