@@ -45,7 +45,7 @@ body {
 .dot {
     width: 70%;
     height: 70%;
-    background-image: radial-gradient(rgb(87, 87, 87), black);
+    background-image: radial-gradient(rgb(90, 90, 90), black);
     border-radius: 50%;
 }
 
