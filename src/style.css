@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dice-min-width: 6rem;
+  --dice-max-width: 20rem;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -12,7 +21,9 @@ body {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    min-width: 20%;
+    width: 20%;
+    min-width: var(--dice-min-width);
+    max-width: var(--dice-max-width);
 }
 
 .dice-container {
@@ -24,10 +35,9 @@ body {
       "bottom-left bottom-center bottom-right";
     justify-items: center;
     align-items: center;
-    box-sizing: border-box;
     width: 100%;
-    min-width: 6rem;
-    max-width: 20rem;
+    min-width: var(--dice-min-width);
+    max-width: var(--dice-max-width);
     aspect-ratio: 1;
     padding: 6%;
     margin: 1rem;
@@ -38,7 +48,7 @@ body {
 }
 
 .result-container {
-    font-size: clamp(4rem, 8vw, 15rem);
+    font-size: clamp(3rem, 10vw, 10rem);
     font-weight: bold;
 }
 
