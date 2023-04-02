@@ -1,19 +1,19 @@
 'use strict';
 
-const diceContainer = document.querySelector('.dice-container');
+const dice = document.querySelector('.dice');
 const resultContainer = document.querySelector('.result-container');
-diceContainer.addEventListener('click', render);
+dice.addEventListener('click', render);
 
 init();
 
 function init() {
-    diceContainer.innerHTML = createDotPositionHtml('dot-middle-center');
+    dice.innerHTML = createDotPositionHtml('dot-middle-center');
     resultContainer.innerHTML = 1;
 }
 
 function render() {
-    diceContainer.innerHTML = createDiceHtml();
-    resultContainer.innerHTML = diceContainer.children.length;
+    dice.innerHTML = createDiceHtml();
+    resultContainer.innerHTML = dice.children.length;
 }
 
 function createDiceHtml() {
