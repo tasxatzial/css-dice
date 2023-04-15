@@ -1,6 +1,6 @@
-# Dice roll app
+# Dice roller
 
-A very simple dice roll app.
+A simple dice roll app.
 
 ![alt text](screenshots/image.jpg)
 
