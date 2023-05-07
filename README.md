@@ -2,7 +2,7 @@
 
 A simple dice roll app.
 
-![alt text](screenshots/image.jpg)
+![alt text](screenshots/image.png)
 
 ## Implementation
 
