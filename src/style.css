@@ -19,25 +19,25 @@ body {
 }
 
 .dice-container {
-  display: flex;
+    display: flex;
 }
 
 .dice {
-  display: grid;
-  grid: repeat(3, minmax(0, 1fr)) / repeat(3, minmax(0, 1fr));
-  grid-template-areas:
-    "top-left top-center top-right"
-    "middle-left middle-center middle-right"
-    "bottom-left bottom-center bottom-right";
-  justify-items: center;
-  align-items: center;
-  aspect-ratio: 1;
-  padding: 6%;
-  margin: 6%;
-  border-radius: 6%;
-  background-color: #f5f5f5;
-  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
-  cursor: pointer;
+    display: grid;
+    grid: repeat(3, minmax(0, 1fr)) / repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+        "top-left top-center top-right"
+        "middle-left middle-center middle-right"
+        "bottom-left bottom-center bottom-right";
+    justify-items: center;
+    align-items: center;
+    aspect-ratio: 1;
+    padding: 6%;
+    margin: 6%;
+    border-radius: 6%;
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
 }
 
 .result-container {

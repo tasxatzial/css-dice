@@ -4,12 +4,9 @@ const dice = document.querySelector('.dice');
 const resultContainer = document.querySelector('.result-container');
 dice.addEventListener('click', render);
 
-init();
-
-function init() {
-    dice.innerHTML = createDotPositionHtml('dot-middle-center');
-    resultContainer.innerHTML = 1;
-}
+/* initialize */
+dice.innerHTML = createDotHtml('dot-middle-center');
+resultContainer.innerHTML = 1;
 
 function render() {
     dice.innerHTML = createDiceHtml();
@@ -18,12 +15,12 @@ function render() {
 
 function createDiceHtml() {
     const dice = createRandomDice();
-    const diceHtml = dice.map(createDotPositionHtml).join("");
+    const diceHtml = dice.map(createDotHtml).join("");
 
     return diceHtml;
 }
 
-function createDotPositionHtml(position) {
+function createDotHtml(position) {
     return `<div class="dot ${position}"></div>`;
 }
 
