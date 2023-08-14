@@ -6,7 +6,11 @@ A simple dice roll app.
 
 ## Implementation
 
-* Responsive dice.
+* Responsive (grid + flexbox).
+
+## Dependencies
+
+None. The project uses only HTML, CSS, JavaScript.
 
 ## Run locally
 
