@@ -1,16 +1,16 @@
 'use strict';
 
 const dice = document.querySelector('.dice');
-const resultContainer = document.querySelector('.result-container');
+const textResult = document.querySelector('.text-result');
 dice.addEventListener('click', render);
 
 /* initialize */
 dice.innerHTML = createDotHtml('dot-middle-center');
-resultContainer.innerHTML = 1;
+textResult.innerHTML = 1;
 
 function render() {
     dice.innerHTML = createDiceHtml();
-    resultContainer.innerHTML = dice.children.length;
+    textResult.innerHTML = dice.children.length;
 }
 
 function createDiceHtml() {
