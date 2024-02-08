@@ -1,11 +1,11 @@
 'use strict';
 
-const dice = document.querySelector('.dice');
+const dice = document.querySelector('.dice-button');
 const diceResult = document.querySelector('.dice-result');
 dice.addEventListener('click', render);
 
 /* initialize */
-dice.innerHTML = createDotHtml('dot-middle-center');
+dice.innerHTML = createDotHtml('dot-center');
 diceResult.innerHTML = 1;
 
 function render() {
@@ -25,7 +25,7 @@ function createDiceHtml() {
 }
 
 function createDotHtml(position) {
-    return `<div class="dot ${position}"></div>`;
+    return `<div class="dice-dot ${position}"></div>`;
 }
 
 function createRandomDice() {
@@ -38,7 +38,7 @@ function createDice(number) {
     const dots = [];
 
     if (number === 1 || number === 3 || number === 5) {
-        dots.push(('dot-middle-center'));
+        dots.push(('dot-center'));
     }
     if (number !== 1) {
         dots.push('dot-top-left');

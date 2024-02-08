@@ -23,7 +23,7 @@ body {
     font-family: 'Karla', sans-serif;
 }
 
-.container {
+.dice-container {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -32,7 +32,7 @@ body {
     max-width: 15rem;
 }
 
-.dice {
+.dice-button {
     --gap: 6%;
     display: grid;
     grid: repeat(3, 1fr) / repeat(3, 1fr);
@@ -53,17 +53,18 @@ body {
     cursor: pointer;
 }
 
-.dice:focus-visible {
+.dice-button:focus-visible {
     outline: 2px dashed black;
     outline-offset: 2px;
 }
 
 .dice-result {
+    margin: 0;
     font-size: min(5rem, 50vw);
     font-weight: bold;
 }
 
-.dot {
+.dice-dot {
     width: 70%;
     aspect-ratio: 1;
     background-image: radial-gradient(rgb(90, 90, 90), black);
@@ -86,7 +87,7 @@ body {
     grid-area: middle-left;
 }
 
-.dot-middle-center {
+.dot-center {
     grid-area: middle-center;
 }
 
