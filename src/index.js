@@ -1,16 +1,20 @@
 'use strict';
 
 const dice = document.querySelector('.dice');
-const textResult = document.querySelector('.text-result');
+const diceResult = document.querySelector('.dice-result');
 dice.addEventListener('click', render);
 
 /* initialize */
 dice.innerHTML = createDotHtml('dot-middle-center');
-textResult.innerHTML = 1;
+diceResult.innerHTML = 1;
 
 function render() {
     dice.innerHTML = createDiceHtml();
-    textResult.innerHTML = dice.children.length;
+    if (diceResult.textContent.charAt(diceResult.textContent.length - 1) === '.') {
+        diceResult.innerHTML = dice.children.length;
+    } else {
+        diceResult.innerHTML = `${dice.children.length}<span class="sr-only">.</span>`;
+    }
 }
 
 function createDiceHtml() {

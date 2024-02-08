@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+.sr-only {
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px; 
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -46,7 +58,7 @@ body {
     outline-offset: 2px;
 }
 
-.text-result {
+.dice-result {
     font-size: min(5rem, 50vw);
     font-weight: bold;
 }
