@@ -6,7 +6,8 @@ A simple dice roll app.
 
 ## Implementation
 
-* Responsive (grid + flexbox).
+* Responsive.
+* Accessible + screen reader friendly.
 
 ## Dependencies
 
