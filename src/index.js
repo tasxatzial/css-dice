@@ -13,7 +13,7 @@ function render() {
     if (diceResult.textContent.charAt(diceResult.textContent.length - 1) === '.') {
         diceResult.innerHTML = dice.children.length;
     } else {
-        diceResult.innerHTML = `${dice.children.length}<span class="sr-only">.</span>`;
+        diceResult.innerHTML = `${dice.children.length}.`;
     }
 }
 
