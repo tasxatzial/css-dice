@@ -24,12 +24,13 @@ body {
 }
 
 .dice-container {
+    --max-width: 15rem;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    max-width: 15rem;
+    max-width: var(--max-width);
 }
 
 .dice-button {
@@ -60,7 +61,7 @@ body {
 
 .dice-result {
     margin: 0;
-    font-size: min(5rem, 50vw);
+    font-size: min(calc(var(--max-width) / 3), 33.3vw);
     font-weight: bold;
 }
 
