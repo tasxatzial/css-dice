@@ -2,8 +2,6 @@
 
 A simple dice roll app.
 
-![alt text](screenshots/image.png)
-
 ## Implementation
 
 * Responsive.
