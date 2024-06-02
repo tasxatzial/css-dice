@@ -25,7 +25,7 @@ function createDiceHtml() {
 }
 
 function createDotHtml(position) {
-    return `<div class="dice-dot ${position}"></div>`;
+    return `<span class="dice-dot ${position}"></span>`;
 }
 
 function createRandomDice() {
