@@ -1,7 +1,7 @@
 'use strict';
 
-const dieButton = document.querySelector('.die-button');
-const dieResult = document.querySelector('.die-result');
+const dieButton = document.querySelector('.js-die-button');
+const dieResult = document.querySelector('.js-die-result');
 dieButton.addEventListener('click', () => render(getRandomNumber()));
 
 /* initial render */
