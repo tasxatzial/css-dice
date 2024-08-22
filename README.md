@@ -2,6 +2,10 @@
 
 A simple dice roll app.
 
+## Features
+
+* Roll 1 to 8 dice.
+
 ## Implementation
 
 * Responsive.
@@ -13,4 +17,4 @@ None. The project uses only HTML, CSS, JavaScript.
 
 ## Run locally
 
-Download the 'src' folder and open 'index.html' in the browser.
+Download the `src` folder and open `index.html` in the browser.
