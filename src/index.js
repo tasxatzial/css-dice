@@ -22,13 +22,11 @@ function renderDie(index) {
     const dieEl = diceContainerEl.querySelector(`[aria-labelledby="die-result-${index}"]`);
     const dieResultEl = diceContainerEl.querySelector(`#die-result-${index}`);
     dieEl.classList.add('roll-animation');
+    dieEl.innerHTML = createDieHtml(randomNumber);
+    dieResultEl.innerHTML = randomNumber;
     setTimeout(() => {
         dieEl.classList.remove('roll-animation');
     }, 1000);
-    setTimeout(() => {
-        dieEl.innerHTML = createDieHtml(randomNumber);
-        dieResultEl.innerHTML = randomNumber;
-    }, 850);
 }
 
 function createDieContainerHtml(index) {
