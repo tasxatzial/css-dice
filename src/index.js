@@ -1,19 +1,39 @@
 'use strict';
 
-const dieButton = document.querySelector('.js-die-button');
-const dieResult = document.querySelector('.js-die-result');
-dieButton.addEventListener('click', () => render(getRandomNumber()));
+const formEl = document.querySelector('.js-form');
+const formDieCountInputEl = document.querySelector('.js-form-die-count-input');
+const diceContainerEl = document.querySelector('.js-dice-container');
 
-/* initial render */
-render(1);
-
-function render(value) {
-    dieButton.innerHTML = createDieHtml(value);
-    if (dieResult.textContent.charAt(dieResult.textContent.length - 1) === '.') {
-        dieResult.innerHTML = value;
-    } else {
-        dieResult.innerHTML = value + '.';
+formEl.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const dieCount = Number(formDieCountInputEl.value);
+    diceContainerEl.innerHTML = '';
+    for (let i = 0; i < dieCount; i++) {
+        renderDie(i);
     }
+});
+
+function renderDie(index) {
+    const randomNumber = getRandomNumber();
+    const dieContainer = createDieContainerHtml(index);
+    diceContainerEl.insertAdjacentHTML('beforeend', dieContainer);
+    const dieEl = diceContainerEl.querySelector(`[aria-labelledby="die-result-${index}"]`);
+    const dieResultEl = diceContainerEl.querySelector(`#die-result-${index}`);
+    dieEl.innerHTML = createDieHtml(randomNumber);
+    if (dieResultEl.textContent.charAt(dieResultEl.textContent.length - 1) === '.') {
+        dieResultEl.innerHTML = randomNumber;
+    } else {
+        dieResultEl.innerHTML = randomNumber + '.';
+    }
+}
+
+function createDieContainerHtml(index) {
+    return `
+        <div class="die-container">
+            <div aria-label="die" class="die js-die" aria-labelledby="die-result-${index}"></div>
+            <span hidden id="die-result-${index}" class="js-die-result"></span>
+        </div>
+    `
 }
 
 function createDieHtml(value) {
@@ -47,6 +67,5 @@ function createDotPositions(number) {
         dots.push('middle-left');
         dots.push('middle-right');
     }
-
     return dots;
 }

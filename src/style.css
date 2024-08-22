@@ -3,18 +3,20 @@
 }
 
 :root {
-    --die-max-width: 15rem;
+    --die-max-width: 10rem;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
     margin: 0;
     background-color: #AEB8FE;
     font-family: sans-serif;
+}
+
+form {
+    margin: 1rem 1rem 1.5rem;
 }
 
 h1 {
@@ -22,12 +24,50 @@ h1 {
     text-align: center;
 }
 
+.roll-button {
+    display: block;
+    margin: 0 auto;
+    font-size: 2rem;
+    padding: 0.15em 0.75em;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.form-die-count-label,
+.form-die-count-input {
+    font-size: 1.5rem;
+}
+
+.form-die-count-label {
+    text-align: center;
+    line-height: 1.3;
+}
+
+.form-die-count-input {
+    margin: 0 auto;
+}
+
+.dice-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 50rem;
+}
+
 .die-container {
-    --_die-max-width: var(--die-max-width, 15rem);
+    --_die-max-width: var(--die-max-width, 10rem);
     width: min(100%, var(--_die-max-width));
 }
 
-.die-button {
+.die {
     --gap: 6%;
     display: grid;
     grid: repeat(3, 1fr) / repeat(3, 1fr);
@@ -45,12 +85,6 @@ h1 {
     border-radius: var(--gap);
     background-color: #f5f5f5;
     box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.2), 0px 0px 7px 0px rgba(0,0,0,0.75);
-    cursor: pointer;
-}
-
-.die-button:focus-visible {
-    outline: 2px dashed black;
-    outline-offset: 2px;
 }
 
 .die-dot {

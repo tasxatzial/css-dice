@@ -10,9 +10,13 @@
 </head>
 <body>
     <h1>Roll the dice</h1>
-    <div class="die-container">
-        <button aria-label="die" class="die-button js-die-button" aria-labelledby="die-result"></button>
-        <span hidden id="die-result" class="js-die-result"></span>
-    </div>
+    <form class="js-form">
+        <div class="form-group">
+            <label for="form-die-count-input" class="form-die-count-label">Number of dice</label>
+            <input type="number" id="form-die-count-input" class="form-die-count-input js-form-die-count-input" name="die-count" min="1" max="8"/>
+        </div>
+        <button class="roll-button">Roll</button>
+    </form>
+    <div class="dice-container js-dice-container"></div>
 </body>
 </html>
