@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-:root {
-    --die-max-width: 10rem;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -58,14 +54,14 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
     max-width: 50rem;
     padding: 0 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .die-container {
-    --_die-max-width: var(--die-max-width, 10rem);
-    width: min(100%, var(--_die-max-width));
+    --_die-width: var(--die-width, 5rem);
+    width: var(--_die-width);
 }
 
 .die {

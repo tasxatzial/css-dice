@@ -8,6 +8,8 @@ formEl.addEventListener('submit', (event) => {
     event.preventDefault();
     const dieCount = Number(formDieCountInputEl.value);
     diceContainerEl.innerHTML = '';
+    const dieWidth = Math.max(13 - dieCount*1.1, 6);
+    document.documentElement.style.setProperty('--die-width', `${dieWidth}rem`);
     for (let i = 0; i < dieCount; i++) {
         renderDie(i);
     }
@@ -40,7 +42,7 @@ function createDieContainerHtml(index) {
 
 function createDieHtml(value) {
     const dotPositions = createDotPositions(value);
-    return dotPositions.map(createDotHtml).join("");
+    return dotPositions.map(createDotHtml).join('');
 }
 
 function createDotHtml(position) {
