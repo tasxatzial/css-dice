@@ -19,12 +19,18 @@ function renderDie(index) {
     diceContainerEl.insertAdjacentHTML('beforeend', dieContainer);
     const dieEl = diceContainerEl.querySelector(`[aria-labelledby="die-result-${index}"]`);
     const dieResultEl = diceContainerEl.querySelector(`#die-result-${index}`);
-    dieEl.innerHTML = createDieHtml(randomNumber);
-    if (dieResultEl.textContent.charAt(dieResultEl.textContent.length - 1) === '.') {
-        dieResultEl.innerHTML = randomNumber;
-    } else {
-        dieResultEl.innerHTML = randomNumber + '.';
-    }
+    dieEl.classList.add('roll-animation');
+    setTimeout(() => {
+        dieEl.classList.remove('roll-animation');
+    }, 1000);
+    setTimeout(() => {
+        dieEl.innerHTML = createDieHtml(randomNumber);
+        if (dieResultEl.textContent.charAt(dieResultEl.textContent.length - 1) === '.') {
+            dieResultEl.innerHTML = randomNumber;
+        } else {
+            dieResultEl.innerHTML = randomNumber + '.';
+        }
+    }, 850);
 }
 
 function createDieContainerHtml(index) {
