@@ -25,17 +25,13 @@ function renderDie(index) {
     }, 1000);
     setTimeout(() => {
         dieEl.innerHTML = createDieHtml(randomNumber);
-        if (dieResultEl.textContent.charAt(dieResultEl.textContent.length - 1) === '.') {
-            dieResultEl.innerHTML = randomNumber;
-        } else {
-            dieResultEl.innerHTML = randomNumber + '.';
-        }
+        dieResultEl.innerHTML = randomNumber;
     }, 850);
 }
 
 function createDieContainerHtml(index) {
     return `
-        <div class="die-container">
+        <div class="die-container" aria-live="polite">
             <div aria-label="die" class="die js-die" aria-labelledby="die-result-${index}"></div>
             <span hidden id="die-result-${index}" class="js-die-result"></span>
         </div>
